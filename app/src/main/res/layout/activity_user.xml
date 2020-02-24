@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardTitleUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textDataUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignBottom="@id/imageViewUser"
+                        android:layout_alignTop="@id/imageViewUser"
+                        android:layout_marginRight="8dp"
+                        android:layout_toRightOf="@id/imageViewUser"
+                        android:gravity="center"
+                        android:text="Data Pengguna Aplikasi"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageViewUser"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        app:srcCompat="@drawable/smallkepegawaian" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="-8dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/auNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Fachry"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/auJabatanSKPD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/auNama"
+                android:layout_below="@+id/auNama"
+                android:layout_marginRight="8dp"
+                android:text="Kepala Dinas BKD"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/auEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/auNama"
+                android:layout_below="@+id/auJabatanSKPD"
+                android:layout_marginRight="8dp"
+                android:text="dummy1@gmail.com"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/auNoHP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/auNama"
+                android:layout_below="@+id/auEmail"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text="081232585148"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cv">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PajakActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardTitlePajak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textPajak"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_alignBottom="@id/imageViewPajak"
+                                android:layout_alignTop="@id/imageViewPajak"
+                                android:layout_marginRight="8dp"
+                                android:layout_toRightOf="@id/imageViewPajak"
+                                android:gravity="center"
+                                android:text="Data Pajak"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/imageViewPajak"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginTop="4dp"
+                                app:srcCompat="@drawable/smallpajak" />
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <ImageButton
+                        android:id="@+id/btnRight"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/smallright"/>
+
+                    <TextView
+                        android:id="@+id/textTahun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/btnRight"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignTop="@id/btnRight"
+                        android:layout_toLeftOf="@id/btnRight"
+                        android:gravity="center"
+                        android:text="2019"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/btnLeft"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignBottom="@id/btnRight"
+                        android:layout_toLeftOf="@id/textTahun"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/smallleft"/>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardViewP1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <ProgressBar
+                        android:id="@+id/pbPajak1"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/lineChartTotalPajak"
+                        android:layout_alignTop="@id/lineChartTotalPajak"
+                        android:layout_centerHorizontal="true"
+                        android:alpha="0.5"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Total Penghasilan Pajak Th. 2019"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/lineChartTotalPajak"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+
+                        android:layout_below="@id/textTotal"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp">
+
+                    </com.github.mikephil.charting.charts.LineChart>
+
+                    <ImageButton
+                        android:id="@+id/sharePajak1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/lineChartTotalPajak"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/sharebtn" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardViewP2"
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ProgressBar
+                            android:id="@+id/pbPajak2"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/textSumber"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="4dp"
+                            android:alpha="0.5"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/textSumber"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="left"
+                            android:text="Sumber Pendapatan Kabupaten Sidoarjo Th. "
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/sharePajak2"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignTop="@id/textSumber"
+                            android:layout_marginRight="8dp"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/sharebtn" />
+
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerViewTargetPajak"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="#ffffff">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <ImageView
+                android:id="@+id/ssPajak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

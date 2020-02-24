@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/genderKecamatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/genderPria"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/genderPria"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_toLeftOf="@id/genderWanita"
+        android:text="TextView"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/genderWanita"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_toLeftOf="@id/genderTotal"
+        android:text="TextView"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/genderTotal"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="8dp"
+        android:text="103457"
+        android:textSize="10sp" />
+</RelativeLayout>

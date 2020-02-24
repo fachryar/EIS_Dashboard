@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.farport.android.eiskominfo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/logo"
+        android:installLocation="preferExternal"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:versionCode="2"
+        android:versionName="2.0">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PajakActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".KepegawaianActivity" />
+        <activity android:name=".APBDActivity" />
+        <activity android:name=".AnggaranSKPDActivity" />
+        <activity android:name=".UserActivity" />
+        <activity android:name=".KependudukanActivity" />
+        <activity android:name=".SearchPegawai" />
+        <activity android:name=".AddCategoryActivity" />
+        <activity android:name=".FormAddCategoryActivity" />
+        <activity android:name=".DetailAnggaranActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailAnggaranActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            tools:context=".SearchPegawai">
+
+
+            <TextView
+                android:id="@+id/textViewSKPD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_below="@id/backAnggaran"
+                android:textAlignment="center"
+                android:text="TextView"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textTotalAnggaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewSKPD"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_marginBottom="8dp"
+                android:text="Total Anggaran : 192.000.000"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textTotalAnggaran"
+                android:background="@color/white"
+                android:paddingBottom="8dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <ImageButton
+                android:id="@+id/backAnggaran"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/back" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</LinearLayout>

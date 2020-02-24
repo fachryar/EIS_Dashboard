@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".APBDActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardTitleRealisasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textAPBD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_alignBottom="@id/imageViewAPBD"
+                                android:layout_alignTop="@id/imageViewAPBD"
+                                android:layout_marginRight="8dp"
+                                android:layout_toRightOf="@id/imageViewAPBD"
+                                android:gravity="center"
+                                android:text="Data Realisasi APBD"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/imageViewAPBD"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginTop="4dp"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/smallapbd" />
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <ImageButton
+                        android:id="@+id/btnRightApbd"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/smallright" />
+
+                    <TextView
+                        android:id="@+id/textTahunApbd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/btnRightApbd"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignTop="@id/btnRightApbd"
+                        android:layout_toLeftOf="@id/btnRightApbd"
+                        android:gravity="center"
+                        android:text="2018"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/btnLeftApbd"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBottom="@id/btnRightApbd"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toLeftOf="@id/textTahunApbd"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/smallleft" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <ProgressBar
+                        android:id="@+id/pbRealisasi1"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:layout_alignBottom="@id/barChartAPBD1"
+                        android:layout_alignTop="@id/barChartAPBD1"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/text11"
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="APBD Tahun 2018 (Triliun Rp.)"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/barChartAPBD1"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_alignLeft="@id/text11"
+                        android:layout_below="@id/text11"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="8dp" />
+
+                    <ImageView
+                        android:id="@+id/lineView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/barChartAPBD1"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/textPersen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/barChartAPBD1"
+                        android:layout_below="@id/lineView2"
+                        android:layout_marginLeft="16dp"
+                        android:text="Persentase Realisasi Tahun 2018"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textPendapatan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/textPersen"
+                        android:layout_below="@id/textPersen"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Pendapatan Daerah:"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/textPembiayaan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/textPersen"
+                        android:layout_below="@id/textPendapatan"
+                        android:layout_marginTop="4dp"
+                        android:text="Pembiayaan Daerah:"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/textValuePersenPembiayaan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/textValuePersenPendapatan"
+                        android:layout_alignRight="@id/textValuePersenPendapatan"
+                        android:layout_below="@id/textValuePersenPendapatan"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="105.5%"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/textValuePersenPendapatan"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/textPersen"
+                        android:layout_below="@id/textPersen"
+                        android:layout_marginTop="4dp"
+                        android:text="86.5%"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/textBelanja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/textPembiayaan"
+                        android:layout_below="@+id/textPembiayaan"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Belanja Daerah:"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/textValuePersenBelanja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/textValuePersenPembiayaan"
+                        android:layout_alignRight="@id/textValuePersenPembiayaan"
+                        android:layout_below="@+id/textValuePersenPembiayaan"
+                        android:layout_marginTop="4dp"
+                        android:text="90%"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <ImageButton
+                        android:id="@+id/shareRealisasi1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignBottom="@id/textValuePersenBelanja"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/sharebtn" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <ProgressBar
+                        android:id="@+id/pbRealisasi3"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/text13"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/pbRealisasi2"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:layout_alignBottom="@id/barChartAPBD2"
+                        android:layout_alignTop="@id/barChartAPBD2"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/text12"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btnPendapatan1"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Anggaran dan Realisasi Pendapatan Daerah Tahun 2018 (Triliun Rp.)"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/btnPendapatan1"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toLeftOf="@id/btnPembiayaan1"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/selpendapatan2" />
+
+                    <ImageButton
+                        android:id="@+id/btnBelanja1"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_alignTop="@id/btnPendapatan1"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@id/btnPembiayaan1"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/selbelanja1" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/barChartAPBD2"
+                        android:layout_width="match_parent"
+                        android:layout_height="275dp"
+                        android:layout_alignLeft="@id/text12"
+                        android:layout_below="@id/text12"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="8dp">
+
+                    </com.github.mikephil.charting.charts.BarChart>
+
+                    <TextView
+                        android:id="@+id/text13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/barChartAPBD2"
+                        android:layout_below="@id/lineView"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toLeftOf="@id/text15"
+                        android:text="Rincian"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerViewAnggaranRealisasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/text13"
+                        android:layout_below="@id/text13"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="8dp"
+                        android:textAlignment="center">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <ImageButton
+                        android:id="@+id/shareRealisasi2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_above="@id/barChartAPBD2"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/sharebtn" />
+
+                    <TextView
+                        android:id="@+id/text14"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/text16"
+                        android:layout_marginRight="8dp"
+                        android:layout_toLeftOf="@id/text16"
+                        android:text="Realisasi"
+                        android:textAlignment="center"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text16"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/text13"
+                        android:layout_marginRight="16dp"
+                        android:text="%"
+                        android:textAlignment="center"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text15"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/text16"
+                        android:layout_marginRight="8dp"
+                        android:layout_toLeftOf="@id/text14"
+                        android:text="Anggaran"
+                        android:textAlignment="center"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/lineView"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/barChartAPBD2"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorPrimary" />
+
+                    <ImageButton
+                        android:id="@+id/btnPembiayaan1"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/selpembiayaan1" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <ImageView
+                android:id="@+id/ssRealisasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

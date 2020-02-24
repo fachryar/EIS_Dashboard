@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PajakActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".SearchPegawai">
+
+    <ProgressBar
+        android:id="@+id/pbSearch"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSearch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:alpha="0.5"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Search Pegawai"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textNama"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/center"
+        android:text="Nama"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editNama"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textNama"
+        android:layout_below="@+id/textNama"
+        android:backgroundTint="@color/colorPrimaryDarker"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textNIP"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textNama"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/center"
+        android:text="NIP"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_centerHorizontal="true"
+        android:text="."
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/editNIP"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textNIP"
+        android:backgroundTint="@color/colorPrimaryDarker"
+        android:textColor="@color/white"
+        android:layout_below="@id/textNIP"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textUnit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editNama"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/center"
+        android:text="Unit Kerja"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <AutoCompleteTextView
+        android:id="@+id/editUnit"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textNama"
+        android:layout_below="@+id/textUnit"
+        android:backgroundTint="@color/colorPrimaryDarker"
+        android:completionThreshold="0"
+        android:dropDownHeight="300dp"
+        android:imeOptions="actionSend"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textGolongan"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textUnit"
+        android:layout_below="@id/editNIP"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/center"
+        android:buttonTint="@color/white"
+        android:textColor="@color/white"
+        android:text="Golongan"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/check1"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@id/textGolongan"
+        android:layout_below="@+id/textUnit"
+        android:layout_marginLeft="32dp"
+        android:checked="false"
+        android:buttonTint="@color/white"
+        android:textColor="@color/white"
+        android:scaleX="0.70"
+        android:scaleY="0.70"
+        android:text="I"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/check2"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:layout_alignRight="@id/textGolongan"
+        android:layout_below="@+id/textUnit"
+        android:buttonTint="@color/white"
+        android:textColor="@color/white"
+        android:layout_marginRight="32dp"
+        android:checked="false"
+        android:scaleX="0.70"
+        android:scaleY="0.70"
+        android:text="II"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/check3"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@id/textGolongan"
+        android:buttonTint="@color/white"
+        android:textColor="@color/white"
+        android:layout_below="@+id/check1"
+        android:layout_marginLeft="32dp"
+        android:checked="false"
+        android:scaleX="0.70"
+        android:scaleY="0.70"
+        android:text="III"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/check4"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:layout_alignRight="@id/textGolongan"
+        android:layout_below="@+id/check2"
+        android:layout_marginRight="32dp"
+        android:checked="false"
+        android:buttonTint="@color/white"
+        android:textColor="@color/white"
+        android:scaleX="0.70"
+        android:scaleY="0.70"
+        android:text="IV"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/textGolongan"
+        android:layout_below="@id/check4"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/colorPrimaryDarker"
+        android:text="Search"
+        android:textColor="@android:color/white" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSearch">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <Spinner
+        android:id="@+id/spinnerUnit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textUnit"
+        android:layout_below="@+id/textUnit"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/backKepegawaian"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignTop="@id/textView"
+        android:layout_marginLeft="8dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/back" />
+
+</RelativeLayout>
+
+    </ScrollView>
+</LinearLayout>

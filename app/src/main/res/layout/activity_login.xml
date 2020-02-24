@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@drawable/homebgblue">
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/valEmail"
+        android:layout_alignRight="@id/valEmail"
+        android:layout_below="@id/valPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/colorPrimaryDarker"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <EditText
+        android:id="@+id/valEmail"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_below="@id/imageLogo"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/lightgrey"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/valPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/valEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_alignLeft="@id/valEmail"
+        android:layout_alignRight="@id/valEmail"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/lightgrey"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/textJudul"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textJudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:fontFamily="monospace"
+        android:text="EIS Dashboard E-Government"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/pbLogin"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:alpha="0.5"
+        android:visibility="gone" />
+</RelativeLayout>

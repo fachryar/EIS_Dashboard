@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+    <!--</RelativeLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imgPj"-->
+        <!--android:layout_width="22dp"-->
+        <!--android:layout_height="22dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:scaleType="fitXY"-->
+        <!--app:srcCompat="@drawable/tester" />-->
+
+        <ImageView
+            android:id="@+id/imgPj"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/tester" />
+
+        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+            android:id="@+id/barPj"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="8dp"
+            app:rcBackgroundColor="@android:color/transparent"
+            app:rcBackgroundPadding="2dp"
+            app:rcMax="300"
+            app:rcProgress="50"
+            app:rcProgressColor="@color/colorPrimary"
+            app:rcRadius="16dp"
+            app:rcReverse="false"
+            app:rcSecondaryProgress="300"
+            app:rcSecondaryProgressColor="@color/lightgrey">
+
+        </com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/textPj"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="-"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/targetPj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2dp"
+            android:text="13.2M"
+            android:gravity="bottom"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_toLeftOf="@id/targetPj"
+            android:text="/"
+            android:gravity="bottom"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/totalPj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="2dp"
+            android:layout_toLeftOf="@+id/textView7"
+            android:text="8.6M"
+            android:gravity="bottom"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

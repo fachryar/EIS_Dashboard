@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textU2"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@id/textPersen"
+        android:text="LDP-"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textU3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textPersen"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toLeftOf="@id/textAnggaran"
+        android:layout_toRightOf="@id/textU2"
+        android:text="DALALAL"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textAnggaran"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textPersen"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/textRealisasi"
+        android:text="500.50M"
+        android:textAlignment="center"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textRealisasi"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textPersen"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/textPersen"
+        android:text="500.50M"
+        android:textAlignment="center"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textPersen"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="101.50%"
+        android:textAlignment="center"
+        android:textSize="10sp" />
+</RelativeLayout>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".KepegawaianActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardTitleKepegawaian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textKepegawaian"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_alignBottom="@id/imageViewKepegawaian"
+                                android:layout_alignTop="@id/imageViewKepegawaian"
+                                android:layout_marginRight="8dp"
+                                android:layout_toRightOf="@id/imageViewKepegawaian"
+                                android:gravity="center"
+                                android:text="Data Kepegawaian"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/imageViewKepegawaian"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginTop="4dp"
+                                app:srcCompat="@drawable/smallkepegawaian" />
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <ImageButton
+                        android:id="@+id/imageSearch"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignBottom="@id/cardTitleKepegawaian"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/smallsearch1" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <ProgressBar
+                        android:id="@+id/pbKepegawaian1"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:alpha="0.5"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textTotalPegawai"
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Persentase Jumlah Pegawai Pemkab Sidoarjo Berdasarkan Jenis Kelamin"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/pieChartKepegawaian"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_alignLeft="@id/textTotalPegawai"
+                        android:layout_below="@id/textTotalPegawai"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="-10dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="4dp">
+
+                    </com.github.mikephil.charting.charts.PieChart>
+
+                    <ImageButton
+                        android:id="@+id/shareKepegawaian1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/pieChartKepegawaian"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/sharebtn" />
+
+                    <ImageButton
+                        android:id="@+id/btnKelamin"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toLeftOf="@id/btnUsia"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/selgender2" />
+
+
+                    <ImageButton
+                        android:id="@+id/btnUsia"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/selusia1" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <ProgressBar
+                        android:id="@+id/pbKepegawaian2"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:alpha="0.5"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textJumlahPegawai"
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Jumlah Pegawai Pemkab Sidoarjo Berdasarkan Golongan"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/barChartKepegawaian"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_alignLeft="@id/textJumlahPegawai"
+                        android:layout_below="@id/textJumlahPegawai"
+                        android:layout_marginRight="8dp" />
+
+                    <ImageButton
+                        android:id="@+id/shareKepegawaian2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/barChartKepegawaian"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/sharebtn" />
+
+                    <ImageButton
+                        android:id="@+id/leftGol"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBottom="@id/rightGol"
+                        android:layout_toLeftOf="@id/textGol"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/smallleft" />
+
+                    <ImageButton
+                        android:id="@+id/rightGol"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBottom="@id/textJumlahPegawai"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/smallright" />
+
+                    <TextView
+                        android:id="@+id/textGol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/rightGol"
+                        android:layout_alignTop="@id/rightGol"
+                        android:layout_toLeftOf="@id/rightGol"
+                        android:gravity="center"
+                        android:text="Golongan I"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <ImageView
+                android:id="@+id/ssKepegawaian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

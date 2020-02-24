@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:background="@drawable/homev4"
+                android:gravity="bottom"
+                android:textAlignment="center" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textTotalPegawai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginStart="22dp"
+                    android:text="Selamat datang,"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FACHRY ADITYA RACHMAN"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textTotalPegawai"
+                    app:layout_constraintTop_toBottomOf="@+id/textTotalPegawai" />
+
+                <ImageButton
+                    android:id="@+id/btnAnggaran"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toStartOf="@+id/btnRealisasi"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text2"
+                    app:srcCompat="@drawable/homeusulan" />
+
+                <ImageButton
+                    android:id="@+id/btnPajak"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnRealisasi"
+                    app:layout_constraintTop_toTopOf="@+id/btnAnggaran"
+                    app:srcCompat="@drawable/homepajak" />
+
+                <ImageButton
+                    android:id="@+id/btnRealisasi"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toStartOf="@+id/btnPajak"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnAnggaran"
+                    app:layout_constraintTop_toTopOf="@+id/btnAnggaran"
+                    app:srcCompat="@drawable/homerealisasiapbd" />
+
+                <ImageButton
+                    android:id="@+id/btnKepegawaian"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toStartOf="@+id/btnKependudukan"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnAnggaran"
+                    app:srcCompat="@drawable/homekepegawaian" />
+
+                <ImageButton
+                    android:id="@+id/btnKependudukan"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toStartOf="@+id/btnMenu1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnKepegawaian"
+                    app:layout_constraintTop_toTopOf="@+id/btnKepegawaian"
+                    app:srcCompat="@drawable/homekependudukan" />
+
+                <ImageButton
+                    android:id="@+id/btnMenu1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnKependudukan"
+                    app:layout_constraintTop_toTopOf="@+id/btnKepegawaian"
+                    app:srcCompat="@drawable/homeuser" />
+
+                <ImageButton
+                    android:id="@+id/btnMenu3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toStartOf="@+id/btnMenu4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnMenu2"
+                    app:layout_constraintTop_toTopOf="@+id/btnMenu4" />
+
+                <ImageButton
+                    android:id="@+id/btnMenu2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toStartOf="@+id/btnMenu3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/btnMenu4" />
+
+                <ImageButton
+                    android:id="@+id/btnMenu4"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnMenu3"
+                    app:layout_constraintTop_toBottomOf="@+id/btnKepegawaian"
+                    app:srcCompat="@drawable/homelogout" />
+
+                <ImageButton
+                    android:id="@+id/btnLogout"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnUser"
+                    app:layout_constraintTop_toBottomOf="@+id/btnMenu4"
+                    app:srcCompat="@drawable/homelogout" />
+
+                <ImageButton
+                    android:id="@+id/btnAddKategori"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toStartOf="@+id/btnUser"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/btnLogout"
+                    app:srcCompat="@drawable/homelogout" />
+
+                <ImageButton
+                    android:id="@+id/btnUser"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toStartOf="@+id/btnLogout"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnAddKategori"
+                    app:layout_constraintTop_toTopOf="@+id/btnLogout"
+                    app:srcCompat="@drawable/homeuser" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

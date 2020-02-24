@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textPekerjaan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="4dp"
+        android:layout_toLeftOf="@id/textJumlah"
+        android:text="Pekerjaan"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textJumlah"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="16dp"
+        android:text="100.000.000"
+        android:textSize="10sp" />
+</RelativeLayout>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/lineViewPend"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/textKecamatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/lineViewPend"
+        android:layout_marginBottom="2dp"
+        android:text="Kecamatan"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewTBS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textKecamatan"
+        android:layout_marginBottom="4dp"
+        android:text="Tidak / Belum Sekolah: "
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tTBS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textViewTBS"
+        android:layout_alignTop="@id/textViewTBS"
+        android:text="500.000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textViewBTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTBS"
+        android:layout_marginBottom="4dp"
+        android:text="Belum Tamat Sekolah: "
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tBTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textViewBTS"
+        android:layout_alignTop="@id/textViewBTS"
+        android:text="500.000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textViewTSS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewBTS"
+        android:layout_marginBottom="4dp"
+        android:text="Tidak Lulus Sekolah: "
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tTTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textViewTSS"
+        android:layout_alignTop="@id/textViewTSS"
+        android:text="500.000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textViewSLTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTSS"
+        android:layout_marginBottom="4dp"
+        android:text="SLTP: "
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tSLTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textViewSLTP"
+        android:layout_alignTop="@id/textViewSLTP"
+        android:text="500.000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textViewSLTA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewSLTP"
+        android:layout_marginBottom="8dp"
+        android:text="SLTA: "
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tSLTA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textViewSLTA"
+        android:layout_alignTop="@id/textViewSLTA"
+        android:text="500.000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textViewD1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/textViewTBS"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toRightOf="@id/middleP"
+        android:text="D1 / D2: "
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tD1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textViewD1"
+        android:layout_alignTop="@id/textViewD1"
+        android:text="500.000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textViewD3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textViewD1"
+        android:layout_below="@id/textViewD1"
+        android:layout_marginBottom="4dp"
+        android:text="D3: "
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tD3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textViewD3"
+        android:layout_alignTop="@id/textViewD3"
+        android:text="500.000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textViewS1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textViewD1"
+        android:layout_below="@id/textViewD3"
+        android:layout_marginBottom="4dp"
+        android:text="D4 / S1: "
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tS1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textViewS1"
+        android:layout_alignTop="@id/textViewS1"
+        android:text="500.000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textViewS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textViewD1"
+        android:layout_below="@id/textViewS1"
+        android:layout_marginBottom="4dp"
+        android:text="S2: "
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textViewS2"
+        android:layout_alignTop="@id/textViewS2"
+        android:text="500.000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textViewS3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textViewD1"
+        android:layout_below="@id/textViewS2"
+        android:layout_marginBottom="4dp"
+        android:text="S3: "
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tS3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textViewS3"
+        android:layout_alignTop="@id/textViewS3"
+        android:text="500.000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/middleP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/tTBS"
+        android:layout_marginLeft="32dp"
+        android:layout_toRightOf="@id/tTBS"
+        android:text=""
+        android:textSize="10sp" />
+
+</RelativeLayout>

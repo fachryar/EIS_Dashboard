@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/valNo"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@id/valTipe"
+        android:text="1."
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/valTipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/valTotal"
+        android:layout_toRightOf="@id/valNo"
+        android:text="TextView"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/valTotal"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/valTipe"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+</RelativeLayout>
